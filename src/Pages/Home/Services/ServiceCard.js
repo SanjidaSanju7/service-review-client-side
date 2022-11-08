@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ServiceCard = ({ service }) => {
 
-    const { name, image, price, description, } = service;
+    const { _id, name, image, price, description, } = service;
     return (
 
-        <div className="max-w-xs p-6 rounded-md  dark:bg-gray-900 dark:text-gray-50 text-left mx-auto mb-10 bg-slate-100 shadow-lg">
+        <div className="max-w-xs p-6 rounded-md  dark:bg-gray-900 dark:text-gray-50 text-left mx-auto mb-10 bg-purple-50 shadow-lg">
             <img src={image} alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
             <div className="mt-6 mb-2">
                 <h2 className="text-xl font-semibold tracking-wide">
@@ -23,7 +24,9 @@ const ServiceCard = ({ service }) => {
                 }
             </p>
 
-            <button className="btn btn-wide bg-purple-500 mt-5">Details</button>
+            <Link to={`/services/${_id}`}>
+                <button className="btn btn-wide bg-purple-500 mt-5">View Details</button>
+            </Link>
 
         </div>
 

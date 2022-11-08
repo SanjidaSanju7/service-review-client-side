@@ -12,9 +12,9 @@ const Services = () => {
     }, [])
 
     return (
-        <div>
-            <div className='text-center mb-4 mt-10'>
-                <h2 className="text-5xl font-semibold text-purple-800">Services</h2>
+        <div className='mb-5 mt-10'>
+            <div className='text-center mb-4'>
+                <h2 className="text-5xl font-semibold text-purple-600">Services</h2>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
@@ -24,6 +24,7 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
+            <button className="btn btn-active bg-purple-500 " >See All</button>
         </div>
     );
 };
