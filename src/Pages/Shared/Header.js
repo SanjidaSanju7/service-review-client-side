@@ -79,18 +79,20 @@ const Header = () => {
                             to=""
                             aria-label="name"
                             title="name"
-                            className="font-bold tracking-wide text-slate-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-medium tracking-wide text-grey-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             {
                                 user?.uid ?
                                     <>
                                         {user?.displayName}
                                         <button onClick={handleLogOut} className="btn-sm bg-purple-500 rounded ml-3">Log out</button>
+                                        <Link className='ml-3' to='/reviews'>My Reviews</Link>
                                     </>
                                     :
                                     <>
                                         <Link to='/login'> Login</Link>
-                                        <Link to='/register' className='ml-3'>Register</Link>
+                                        <Link to='/signup' className='ml-3'>Sign Up</Link>
+
                                     </>
                             }
                         </Link>
