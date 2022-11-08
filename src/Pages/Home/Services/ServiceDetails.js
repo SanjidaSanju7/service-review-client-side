@@ -1,9 +1,52 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 const ServiceDetails = () => {
-    const { name, image, description } = useLoaderData()
+
+    const { user } = useContext(AuthContext);
+    const { _id, name, image, description } = useLoaderData();
+
+    const handleGiveReview = event => {
+        event.preventDefault();
+        const form = event.target;
+        const fullName = `${form.firstName.value} ${form.lastName.value}`;
+        const email = user?.email || 'unregistered'
+        const userImage = user?.photoURL
+        const message = form.message.value;
+
+        const review = {
+            service: _id,
+            serviceName: name,
+            customer: fullName,
+            email,
+            message,
+            img: userImage
+        }
+
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Added Your Review Successfully')
+                    form.reset();
+                }
+            })
+            .catch(err => console.error(err));
+
+
+    }
+
+
     return (
         <div>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -40,19 +83,21 @@ const ServiceDetails = () => {
             {/* add a review */}
             <h2 className='text-4xl text-purple-600 font-serif'>All Reviews</h2>
             <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
-                <form novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid bg-purple-100">
+                <form onSubmit={handleGiveReview} novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid bg-purple-100">
                     <fieldset className="grid grid-cols-2 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-semibold">Give a review about: {name}</p>
-                            <p>Please login</p>
+                            <p className="font-semibold">Give a review about: {name}
+                            </p>
+                            <span> please <Link to="/login" className="text-purple-700">Login</Link></span>
                         </div>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                             <input name="firstName" type="text" placeholder="First Name" className="input input-bordered w-full" />
                             <input name="lastName" type="text" placeholder="Last Name" className="input input-bordered w-full " />
-                            <input name="email" type="text" placeholder="Your Email" className="input input-bordered w-full readOnly" />
-                            <textarea name="message" className="textarea textarea-bordered p-10" placeholder="message"></textarea>
+                            <input name="email" type="text" placeholder="Your Email" className="input input-bordered w-full" readOnly defaultValue={user?.email} />
+                            <textarea name="message" className="textarea textarea-bordered p-10" placeholder="Your Message"></textarea>
                         </div>
                     </fieldset>
+                    <button className="btn mx-auto bg-purple-500 mt-5 w-1/4">Give Review</button>
                 </form>
             </section>
         </div>
