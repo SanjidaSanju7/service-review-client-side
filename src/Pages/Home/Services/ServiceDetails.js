@@ -37,6 +37,24 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             </div>
+            {/* add a review */}
+            <h2 className='text-4xl text-purple-600 font-serif'>All Reviews</h2>
+            <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
+                <form novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid bg-purple-100">
+                    <fieldset className="grid grid-cols-2 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
+                        <div className="space-y-2 col-span-full lg:col-span-1">
+                            <p className="font-semibold">Give a review about: {name}</p>
+                            <p>Please login</p>
+                        </div>
+                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                            <input name="firstName" type="text" placeholder="First Name" className="input input-bordered w-full" />
+                            <input name="lastName" type="text" placeholder="Last Name" className="input input-bordered w-full " />
+                            <input name="email" type="text" placeholder="Your Email" className="input input-bordered w-full readOnly" />
+                            <textarea name="message" className="textarea textarea-bordered p-10" placeholder="message"></textarea>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
         </div>
     )
 };
