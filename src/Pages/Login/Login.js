@@ -20,7 +20,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                console.log(error);
+                console.error(error);
                 setError(error.message)
             })
     }
@@ -39,7 +39,7 @@ const Login = () => {
                 setError('');
             })
             .catch(error => {
-                console.log(error);
+                console.error(error);
                 setError(error.message)
             })
 

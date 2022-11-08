@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
 
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
 
-        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-purple-200">
             <div className="relative d-flex grid items-center grid-cols-2 lg:grid-cols-3">
                 <ul className="d-flex items-center hidden space-x-8 lg:flex">
                     <li>
@@ -68,25 +76,46 @@ const Header = () => {
                 <ul className="d-flex items-center hidden ml-auto space-x-8 lg:flex">
                     <li>
                         <Link
-                            to="/"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            to=""
+                            aria-label="name"
+                            title="name"
+                            className="font-bold tracking-wide text-slate-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                            Sign in
+                            {
+                                user?.uid ?
+                                    <>
+                                        {user?.displayName}
+                                        <button onClick={handleLogOut} className="btn-sm bg-purple-500 rounded ml-3">Log out</button>
+                                    </>
+                                    :
+                                    <>
+                                        <Link to='/login'> Login</Link>
+                                        <Link to='/register' className='ml-3'>Register</Link>
+                                    </>
+                            }
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
+                            to=""
+                            aria-label="user photo"
+                            title="user photo"
+                            className="font-bold tracking-widetransition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                            Sign up
+                            {user?.photoURL ?
+                                <img style={{ height: '30px' }}
+                                    src={user?.photoURL} alt=''
+
+                                >
+                                </img>
+
+                                : <FaUser></FaUser>
+                            }
                         </Link>
                     </li>
                 </ul>
+
+                {/* mobile responsive */}
                 <div className="ml-auto lg:hidden">
                     <button
                         aria-label="Open Menu"
