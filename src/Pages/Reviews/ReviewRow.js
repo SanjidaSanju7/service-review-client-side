@@ -1,8 +1,13 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
-const ReviewRow = ({ review }) => {
 
-    const { img, customer, serviceName, message } = review;
+const ReviewRow = ({ review, handleDelete }) => {
+
+    const { _id, img, customer, serviceName, message } = review;
+
+
+
     return (
 
         <div className="card w-72 shadow-lg mx-auto py-2 bg-purple-100">
@@ -14,7 +19,8 @@ const ReviewRow = ({ review }) => {
                 </h2>
                 <p className='text-justify'>Review : {message}</p>
                 <div className="card-actions justify-end">
-                    <button className='btn btn-sm bg-purple-500'>Delete</button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-sm bg-purple-500'>Delete</button>
+                    <ToastContainer />
                     <button className='btn btn-sm bg-purple-500'>Update</button>
                 </div>
             </div>
