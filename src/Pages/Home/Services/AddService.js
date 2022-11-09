@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const AddService = () => {
 
@@ -27,7 +29,15 @@ const AddService = () => {
             body: JSON.stringify(services)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Service Added', {
+                        position: 'top-center'
+                    })
+                    form.reset();
+                }
+            })
             .catch(err => console.error(err));
 
 
@@ -46,9 +56,8 @@ const AddService = () => {
                         <textarea name="description" type="text" className="textarea textarea-bordered p-10" placeholder="Service Description"></textarea>
                     </div>
                     <button className="btn mx-auto bg-purple-500 mt-5 w-1/4">Add Service</button>
+                    <ToastContainer />
                 </fieldset>
-
-
             </form>
         </section>
     );
