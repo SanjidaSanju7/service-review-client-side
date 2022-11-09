@@ -12,11 +12,13 @@ const Header = () => {
             .then(() => { })
             .catch(error => console.error(error))
     }
+
+    // 
     return (
 
-        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-purple-200">
-            <div className="relative d-flex grid items-center grid-cols-2 lg:grid-cols-3">
-                <ul className="d-flex items-center hidden space-x-8 lg:flex">
+        <div className="px-4 py-5 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8 bg-purple-200">
+            <div className="lg:grid-cols-3 grid-cols-2 grid items-center relative d-flex  ">
+                <ul className="d-flex items-center hidden space-x-7 lg:flex">
                     <li>
                         <Link
                             to="/"
@@ -39,12 +41,12 @@ const Header = () => {
                     </li>
                     <li>
                         <Link
-                            to="/"
+                            to="/blog"
                             aria-label="Product pricing"
                             title="Product pricing"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                            Pricing
+                            Blog
                         </Link>
                     </li>
                 </ul>
@@ -85,8 +87,9 @@ const Header = () => {
                                 user?.uid ?
                                     <>
                                         {user?.displayName}
-                                        <button onClick={handleLogOut} className="btn-sm bg-purple-500 rounded ml-3">Log out</button>
-                                        <Link className='ml-3' to='/reviews'>My Reviews</Link>
+                                        <Link className='ml-2' to='/reviews'>My Reviews</Link>
+                                        <Link className='ml-2' to='/addservice'>Add Service</Link>
+                                        <button onClick={handleLogOut} className="btn-xs bg-purple-500 rounded">Log out</button>
                                     </>
                                     :
                                     <>
@@ -118,7 +121,7 @@ const Header = () => {
                 </ul>
 
                 {/* mobile responsive */}
-                <div className="ml-auto lg:hidden">
+                <div className="ml-auto lg:hidden z-10">
                     <button
                         aria-label="Open Menu"
                         title="Open Menu"
@@ -188,7 +191,7 @@ const Header = () => {
                                     </div>
                                 </div>
                                 <nav>
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-4 bg-purple-100">
                                         <li>
                                             <Link
                                                 to="/"
@@ -211,32 +214,56 @@ const Header = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                to="/"
+                                                to="/blog"
                                                 aria-label="Product pricing"
                                                 title="Product pricing"
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                Pricing
+                                                Blog
                                             </Link>
                                         </li>
                                         <li>
+
                                             <Link
-                                                to="/"
-                                                aria-label="Sign in"
-                                                title="Sign in"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                to=""
+                                                aria-label="name"
+                                                title="name"
+                                                className="font-medium tracking-wide text-grey-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                Sign in
+                                                {
+                                                    user?.uid ?
+                                                        <>
+                                                            {user?.displayName}
+                                                            <Link className='ml-2' to='/reviews'>My Reviews</Link>
+                                                            <Link className='ml-2' to='/addservice'>Add Service</Link>
+                                                            <button onClick={handleLogOut} className="btn-xs bg-purple-500 rounded">Log out</button>
+                                                        </>
+                                                        :
+                                                        <>
+                                                            <Link to='/login'> Login</Link>
+                                                            <Link to='/signup' className='ml-3'>Sign Up</Link>
+
+                                                        </>
+                                                }
                                             </Link>
                                         </li>
+
                                         <li>
                                             <Link
-                                                to="/"
-                                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                                aria-label="Sign up"
-                                                title="Sign up"
+                                                to=""
+                                                aria-label="user photo"
+                                                title="user photo"
+                                                className="font-bold tracking-widetransition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                Sign up
+                                                {user?.photoURL ?
+                                                    <img style={{ height: '30px' }}
+                                                        src={user?.photoURL} alt=''
+
+                                                    >
+                                                    </img>
+
+                                                    : <FaUser></FaUser>
+                                                }
                                             </Link>
                                         </li>
                                     </ul>

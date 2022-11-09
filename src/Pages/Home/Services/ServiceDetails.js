@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import AllReviews from '../../AllReviews/AllReviews';
 
@@ -43,7 +44,9 @@ const ServiceDetails = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    toast.success('Added Your Review Successfully')
+                    toast.success('Added Your Review Successfully', {
+                        position: 'top-center'
+                    })
                     form.reset();
                 }
             })
@@ -106,6 +109,7 @@ const ServiceDetails = () => {
                             </div>
                         </fieldset>
                         <button className="btn mx-auto bg-purple-500 mt-5 w-1/4">Give Review</button>
+                        <ToastContainer />
                     </form>
                 </section>
             </div>
