@@ -49,6 +49,26 @@ const Header = () => {
                             Blog
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to="/about"
+                            aria-label="about"
+                            title="about"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                            About Me
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/contact"
+                            aria-label="contact"
+                            title="contact"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
                 <Link
                     to="/"
@@ -220,6 +240,26 @@ const Header = () => {
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Blog
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/about"
+                                                aria-label="about"
+                                                title="about"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                            >
+                                                About Me
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="/contact"
+                                                aria-label="contact"
+                                                title="contact"
+                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                            >
+                                                Contact Me
                                             </Link>
                                         </li>
                                         <li>
