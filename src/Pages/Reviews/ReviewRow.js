@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const ReviewRow = ({ review, handleDelete }) => {
@@ -21,7 +23,7 @@ const ReviewRow = ({ review, handleDelete }) => {
                 <div className="card-actions justify-end">
                     <button onClick={() => handleDelete(_id)} className='btn btn-sm bg-purple-500'>Delete</button>
                     <ToastContainer />
-                    <button className='btn btn-sm bg-purple-500'>Update</button>
+                    <Link to={`/reviews/${review._id}`}><button className='btn btn-sm bg-purple-500'>Update</button></Link>
                 </div>
             </div>
         </div>
