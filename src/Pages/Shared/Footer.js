@@ -17,7 +17,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            News
+                                            Wedding
                                         </a>
                                     </li>
                                     <li>
@@ -25,7 +25,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            World
+                                            Sports
                                         </a>
                                     </li>
                                     <li>
@@ -33,7 +33,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Games
+                                            Portrait
                                         </a>
                                     </li>
                                     <li>
@@ -41,20 +41,20 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            References
+                                            Fashion
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <p className="font-medium tracking-wide text-gray-300">Apples</p>
+                                <p className="font-medium tracking-wide text-gray-300">Navigate</p>
                                 <ul className="mt-2 space-y-2">
                                     <li>
                                         <a
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Web
+                                            Home
                                         </a>
                                     </li>
                                     <li>
@@ -62,7 +62,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            eCommerce
+                                            Galleries
                                         </a>
                                     </li>
                                     <li>
@@ -70,7 +70,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Business
+                                            Contact
                                         </a>
                                     </li>
                                     <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Entertainment
+                                            The Experience
                                         </a>
                                     </li>
                                     <li>
@@ -92,14 +92,14 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div>
-                                <p className="font-medium tracking-wide text-gray-300">Cherry</p>
+                                <p className="font-medium tracking-wide text-gray-300">Get in touch</p>
                                 <ul className="mt-2 space-y-2">
                                     <li>
                                         <a
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Media
+                                            Facebook
                                         </a>
                                     </li>
                                     <li>
@@ -107,7 +107,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Brochure
+                                            Pinterest
                                         </a>
                                     </li>
                                     <li>
@@ -115,7 +115,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Nonprofit
+                                            Instagram
                                         </a>
                                     </li>
                                     <li>
@@ -123,7 +123,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Educational
+                                            Linkedin
                                         </a>
                                     </li>
                                     <li>
@@ -131,14 +131,14 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Projects
+                                            You Tube
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <p className="font-medium tracking-wide text-gray-300">
-                                    Business
+                                    More Info
                                 </p>
                                 <ul className="mt-2 space-y-2">
                                     <li>
@@ -146,7 +146,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Infopreneur
+                                            About
                                         </a>
                                     </li>
                                     <li>
@@ -154,7 +154,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Personal
+                                            Work with me
                                         </a>
                                     </li>
                                     <li>
@@ -162,7 +162,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Wiki
+                                            Let's chat
                                         </a>
                                     </li>
                                     <li>
@@ -170,7 +170,7 @@ const Footer = () => {
                                             href="/"
                                             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                         >
-                                            Forum
+                                            Email
                                         </a>
                                     </li>
                                 </ul>
@@ -195,14 +195,13 @@ const Footer = () => {
                                 </button>
                             </form>
                             <p className="mt-4 text-sm text-gray-500">
-                                Bacon ipsum dolor amet short ribs pig sausage prosciuto chicken
-                                spare ribs salami.
+                                I can’t wait to hear from you and start capturing your life’s special moments! ~Marie
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
                         <p className="text-sm text-gray-500">
-                            © Copyright 2020 Lorem Inc. All rights reserved.
+                            © Copyright 2023 Marie Daxon All rights reserved.
                         </p>
                         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                             <a

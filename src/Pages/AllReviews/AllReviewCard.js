@@ -4,7 +4,7 @@ const AllReviewCard = ({ reviewService }) => {
 
     const { img, customer, serviceName, message } = reviewService;
     return (
-        <div className="card w-72 shadow-lg mx-auto py-2 bg-purple-100">
+        <div className="card w-72 shadow-lg mx-auto py-2 bg-purple-50">
             <figure><img className='w-1/4 rounded-lg'
                 src={img} alt="Shoes" /></figure>
             <div className="card-body text-left">
