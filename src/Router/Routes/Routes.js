@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://service-review-server-rho.vercel.app/services/${params.id}`)
             },
             {
                 path: 'login',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
             {
                 path: '/reviews/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://service-review-server-rho.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/addservice',
