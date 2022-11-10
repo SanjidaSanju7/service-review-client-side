@@ -37,7 +37,25 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+
+                const currentUser = {
+                    email: user.email
+                }
+                console.log(user.email);
+                // jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('user-token', data.token);
+                    })
+
                 form.reset();
                 setError('');
             })

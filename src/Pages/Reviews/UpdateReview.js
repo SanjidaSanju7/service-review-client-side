@@ -44,7 +44,7 @@ const UpdateReview = () => {
 
     return (
         <div className='mt-8'>
-            <h2 className='text-4xl text-purple-600 font-serif'>Update: {storedReview.serviceName} </h2>
+            <h2 className='text-3xl text-purple-600 font-serif'>Update: {storedReview.serviceName} </h2>
             <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
                 <form onSubmit={handleUpdateReview} noValidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid bg-purple-100">
                     <fieldset className="grid gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
