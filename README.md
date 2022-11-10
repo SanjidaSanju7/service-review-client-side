@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# A Full Stack Website Starter Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A multipages website built with React, React-router-dom, Firebase, Mongodb, Node, Express.
 
-## Available Scripts
+## Basic Project Structure Setup And Functionality
 
-In the project directory, you can run:
+A full stack online review website about photography.
 
-### `npm start`
+The website has multiple pages like home, about, contact, services. The home page contains a 
+header. Below the navbar it has banner section, services, about, contact and a unique footer section.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The services page has different types of photography. Also a button with view details user can see the details of that service. The service details page has 2 sections. One is details section and another is review section. User can add a review of that service. To give a review user must login.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After login the page user can see her/his own reviews in the my reviews page and also user can update or delete her/his reviews. If user click on the delete button the review will be delete or no longer and if he/she wants to update the reviews then there is a button besides the delete button called update. If user click the update button he/she will go a different dynamic route of that review then he/she can update it.
 
-### `npm test`
+There also a  page called My services. User can add her own choice of services.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The website also have a blog page. The blog page has 4 questions and answers.
 
-### `npm run build`
+The About and contact page has own information of photographer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
