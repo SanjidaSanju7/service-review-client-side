@@ -1,7 +1,10 @@
 import React from 'react';
 import image from '../../assets/images/contact/contact.jpg';
+import useTitle from '../../hooks/useTitle';
 
 const Contact = () => {
+
+    useTitle('Contact')
     return (
 
         <div>

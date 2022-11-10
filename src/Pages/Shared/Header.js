@@ -22,8 +22,8 @@ const Header = () => {
                     <li>
                         <Link
                             to="/"
-                            aria-label="Our product"
-                            title="Our product"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Home
@@ -32,8 +32,8 @@ const Header = () => {
                     <li>
                         <Link
                             to="/services"
-                            aria-label="Our product"
-                            title="Our product"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Services
@@ -42,8 +42,8 @@ const Header = () => {
                     <li>
                         <Link
                             to="/blog"
-                            aria-label="Product pricing"
-                            title="Product pricing"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Blog
@@ -52,8 +52,8 @@ const Header = () => {
                     <li>
                         <Link
                             to="/about"
-                            aria-label="about"
-                            title="about"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             About Me
@@ -62,8 +62,8 @@ const Header = () => {
                     <li>
                         <Link
                             to="/contact"
-                            aria-label="contact"
-                            title="contact"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Contact
@@ -72,8 +72,8 @@ const Header = () => {
                 </ul>
                 <Link
                     to="/"
-                    aria-label="Company"
-                    title="Company"
+                    aria-label=""
+                    title=""
                     className="inline-flex items-center lg:mx-auto"
                 >
                     <svg
@@ -92,15 +92,15 @@ const Header = () => {
                         <rect x="14" y="11" width="7" height="12" />
                     </svg>
                     <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        Marie Daxon Photography
                     </span>
                 </Link>
                 <ul className="d-flex items-center hidden ml-auto space-x-8 lg:flex">
                     <li>
                         <Link
                             to=""
-                            aria-label="name"
-                            title="name"
+                            aria-label=""
+                            title=""
                             className="font-medium tracking-wide text-grey-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             {
@@ -170,8 +170,8 @@ const Header = () => {
                                     <div>
                                         <Link
                                             to="/"
-                                            aria-label="Company"
-                                            title="Company"
+                                            aria-label=""
+                                            title=""
                                             className="inline-flex items-center"
                                         >
                                             <svg
@@ -190,7 +190,7 @@ const Header = () => {
                                                 <rect x="14" y="11" width="7" height="12" />
                                             </svg>
                                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Company
+                                                Marie Daxon Photography
                                             </span>
                                         </Link>
                                     </div>
@@ -215,8 +215,8 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to="/"
-                                                aria-label="Our product"
-                                                title="Our product"
+                                                aria-label=""
+                                                title=""
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Home
@@ -225,8 +225,8 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to="/services"
-                                                aria-label="Our product"
-                                                title="Our product"
+                                                aria-label=""
+                                                title=""
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Services
@@ -235,8 +235,8 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to="/blog"
-                                                aria-label="Product pricing"
-                                                title="Product pricing"
+                                                aria-label=""
+                                                title=""
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Blog
@@ -266,8 +266,8 @@ const Header = () => {
 
                                             <Link
                                                 to=""
-                                                aria-label="name"
-                                                title="name"
+                                                aria-label=""
+                                                title=""
                                                 className="font-medium tracking-wide text-grey-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 {

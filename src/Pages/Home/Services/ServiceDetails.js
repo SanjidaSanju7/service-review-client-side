@@ -102,7 +102,7 @@ const ServiceDetails = () => {
                                 <span> please <Link to="/login" className="text-purple-700">Login</Link></span>
                             </div>
                             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                                <input name="firstName" type="text" placeholder="First Name" className="input input-bordered w-full" />
+                                <input name="firstName" type="text" placeholder="First Name" className="input input-bordered w-full " />
                                 <input name="lastName" type="text" placeholder="Last Name" className="input input-bordered w-full " />
                                 <input name="email" type="text" placeholder="Your Email" className="input input-bordered w-full" readOnly defaultValue={user?.email} />
                                 <textarea name="message" className="textarea textarea-bordered p-10" placeholder="Your Message"></textarea>

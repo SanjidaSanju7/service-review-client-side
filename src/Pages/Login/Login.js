@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+
+    useTitle('Login');
 
     const { providerLogin, signIn } = useContext(AuthContext);
     const [error, setError] = useState('');

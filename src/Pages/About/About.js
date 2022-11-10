@@ -1,7 +1,10 @@
 import React from 'react';
 import image from '../../assets/images/about/person.jpg';
+import useTitle from '../../hooks/useTitle';
 
 const About = () => {
+
+    useTitle('About')
     return (
         <div className='mt-14'>
             <h2 className='text-4xl text-purple-600 font-serif '>About Me</h2>

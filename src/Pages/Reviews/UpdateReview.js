@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateReview = () => {
+
+    useTitle('Update Review')
 
     const storedReview = useLoaderData();
     const [reviews, setReviews] = useState(storedReview)
